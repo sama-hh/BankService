@@ -2,7 +2,6 @@ package org.example;
 
 import java.math.BigDecimal;
 import java.util.Random;
-import java.util.UUID;
 
 public class BankService {
     private Accounts accounts;
