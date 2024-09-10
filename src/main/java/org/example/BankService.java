@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.UUID;
 
 public class BankService {
-    Accounts accounts = new Accounts();
+    private Accounts accounts;
 
     public BankService() {
         this.accounts = new Accounts();
@@ -16,7 +16,7 @@ public class BankService {
         int randomNumber = random.nextInt(1000000000 - 100000000) + 100000000;
         String accountNumber = String.valueOf(randomNumber);
 
-        Account account = new Account(accountNumber, new BigDecimal(0), client);
+        Account account = new Account(accountNumber, new BigDecimal(500), client);
         accounts.addAccount(accountNumber, account);
         return accountNumber;
     }
